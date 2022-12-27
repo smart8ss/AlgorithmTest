@@ -1,0 +1,49 @@
+import java.io.*;
+
+public class BJoon {
+	public static void main(String[] args) throws IOException,NumberFormatException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int T = br.read();
+		for(int i=0; i<T; i++) {
+			int a = br.read();
+			int b = br.read();
+			bw.write(a+b);
+			bw.write("\n");
+				
+		}
+		bw.flush();
+		br.close();
+		bw.close();
+		
+		
+		
+	}
+}
+
+//오류
+/*
+Scanner나 System.out.println 은 속도가 느리기에 O(n)을 초과한다. 
+그러므로 두가지 방법이 존재한다. 
+
+*/
+
+import java.io.*;
+
+public class BJoon{
+public static void main(String[] args){
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+long N = Integer.parseInt(br.readLine());
+StringTokenizer st ;
+
+for(int j=0; j<N; j++ ){
+st = new StringTokenizer(br.readLine(), " " ) ;
+int a = Integer.parseInt(st.nextToken());
+int b = Integer.parseInt(st.nextToken());
+  bw.write(a+b);
+    }
+  bw.flush();
+  }
+}
+
