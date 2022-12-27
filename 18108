@@ -1,0 +1,17 @@
+/*입력 방법을 Scanner 대신 BufferedReader 을 사용하여 풀이하는 방법이다. 단, BufferedReader 는 한 줄 단위로 읽은 뒤 문자열로 반환하기 때문에 주어지는 입력에 대한 문자열을 정수로 변환해주는 과정이 필요하다.
+  이를 위해서는 Integer 클래스의 parseInt()라는 메소드를 사용하면 되는데, 숫자형식의 문자열에 대해 정수형으로 반환해주는 역할을 한다.
+*/
+
+import java.io.*;
+
+public class Main {
+public static void main(String[] args) throws IOException {
+
+
+BufferedReader bin = new BufferedReader(new InputStreamReader(System.in));
+String s = bin.readLine();
+int year = Integer.parseInt();
+
+System.out.println(year - 543);
+}
+}
