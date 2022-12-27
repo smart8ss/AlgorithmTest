@@ -35,6 +35,7 @@ public static void main(String[] args){
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 long N = Integer.parseInt(br.readLine());
+// for 문의 변수에 Scanner, read 등이 들어가면 안됨! 
 StringTokenizer st ;
 
 for(int j=0; j<N; j++ ){
