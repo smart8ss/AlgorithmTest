@@ -1,0 +1,49 @@
+//1번 방법은 배열을 이용해서 Scanner로 입력받는 방법
+
+// 배열을 사용해서 Scanner를 사용해보자
+
+import java.util.*;
+import java.io.*;
+
+public class BJoon {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		//C는 테스트 케이스의 개수 
+		int C = sc.nextInt();
+		
+		//Loop 
+		for(int i=0; i< C ; i++) {
+			
+			//학생 수 N 
+			int N = sc.nextInt();
+			int score[] = new int[N];
+			
+			int sum=0;
+			
+			
+			for(int j=0; j<N; j++) {
+				score[j] = sc.nextInt();
+				sum += score[j];
+			}
+			
+			double mean = (double)sum / N;
+			
+			double num=0.00;
+			for(int j=0; j < N; j++) {
+				if (score[j] > mean ) num++; 
+			}
+			
+			
+			
+			System.out.printf("%.3f%%\n", (num/N)*100);
+			
+			
+		}
+		sc.close();
+	}
+}
+//중요한 것은 double 로 선언해서 나중에 따로 형변환 하지 않는 것!!! 
+// System.out.printf 문에서 % 자체를 출력하기 위해서는 %% 사용
