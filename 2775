@@ -1,0 +1,61 @@
+import java.util.*;
+import java.io.*;
+	
+public class Joon3 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		//TestCase의 수 T
+		int T = Integer.parseInt(br.readLine());
+		
+		int[] arr;
+		
+		for ( int i=0; i< T ; i++) {
+		
+			
+			//층수
+			int k = Integer.parseInt(br.readLine());
+			//호수
+			int n = Integer.parseInt(br.readLine());
+			
+			
+
+			
+			arr = new int[n+1];
+			
+			
+			
+			//0층 디폴트 인원
+			for(int a = 0; a <= n; a ++) {
+				arr[a] = a;	}
+			
+			
+			
+			if (k == 0) {System.out.println(arr[n]);}
+			
+			
+			else {
+			for( int j = 1 ; j <=  k ; j ++) {
+				for(int t = 1; t <= n; t ++) {
+					arr[t]  = arr[t] + arr[t-1];		
+				}
+			}
+			
+			bw.write(arr[n] + "\n");
+			}
+			
+			
+		}
+		
+		bw.flush();
+		br.close();
+		bw.close();
+		
+		
+		
+		
+		
+		
+	}	
+}
