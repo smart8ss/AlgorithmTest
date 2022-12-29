@@ -1,0 +1,105 @@
+import java.io.*;
+
+public class Joon2 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int X = Integer.parseInt(br.readLine());
+				
+		int up; 
+		int down;
+				
+		int n=0; int a=0;
+		if ( X ==1) {System.out.println(1/1);}
+		else {
+			
+			
+			
+		do {
+			n++;
+			a = X - (n*(n+1)/2) ;
+			
+			}while(n<a);
+		
+		
+		if (n % 2 == 0) {
+			down = a;
+			up = n + 2 - a;
+					
+		}
+		
+		else {
+			up = a;
+			down = n + 2 - a;
+						
+		}
+		
+		System.out.println(up + "/" + down );
+		
+		}
+	}
+}
+//오류가 뜨는데, 무슨 오류인지 모르겠음 
+
+
+정답 >>
+
+
+import java.io.*;
+
+public class Joon2 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int X = Integer.parseInt(br.readLine());
+				
+		int up; 
+		int down;
+				
+		int n=0; int a=0;
+		if ( X ==1) {System.out.println(1 + "/" + 1);}
+		else {
+			
+			
+			
+		do {
+			n++;
+			a = X - (n*(n+1)/2) ;
+			
+			}while(n<a);
+		
+		if (a==0) {
+			if ( n% 2 ==1) {
+				a +=1;
+				up = a;
+				down = n + 1 - a;
+			}
+			else {
+				a += 1;
+				down = a;
+				up = n + 1 - a;
+				
+			}
+			
+			System.out.println(up +"/" + down);
+			
+			
+			
+		}
+		else {
+		if (n % 2 == 0) {
+			down = a;
+			up = n + 2 - a;
+					
+		}
+		
+		else {
+			up = a;
+			down = n + 2 - a;
+						
+		}
+		
+		System.out.println(up + "/" + down );
+		
+		}
+		}
+	}
+}
