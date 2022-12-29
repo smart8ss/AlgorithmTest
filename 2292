@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+
+public class BJoon { 
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		
+		//방 개수
+		int N = sc.nextInt();
+		
+		//점점 1 > 6 > 12 > 24
+		long T = 6 ;
+		int count = 1; 
+		
+		
+		while(true) {
+			
+			if(N == 1 )break;
+			
+			
+			else { 
+				
+				if ( (N) / T == 0) break;
+				
+				count ++;
+				T *=2;
+			}
+		}
+				
+		
+		
+		System.out.println(count);
+		
+	}
+}
