@@ -1,0 +1,80 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Joon3 { 
+	int[] arr;
+	
+	
+	
+	public static void swap(int[] arr, int a, int b) {
+		int temp = arr[a];
+		arr[a] = arr[b];
+		arr[b] = temp;
+		return;
+	}
+	
+	
+	
+	
+	public static void sort(int[] arr) {
+		
+		for(int i = 1 ; i < arr.length ; i ++) {
+			int c_index = i;
+			while(true) {
+				int j = c_index-1;
+				
+				if (arr[c_index] < arr[j]) {swap(arr, c_index, j ); c_index =j; 
+				
+				
+				if (j >0 ) j --;
+				else break;}
+				if ((c_index <0) ||(arr[c_index] >= arr[j]) )  break;
+
+			}
+			
+		}
+	}
+	
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st;
+		
+		
+		st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken()) ; 
+		int K = Integer.parseInt(st.nextToken()) ; 
+		
+		
+		int[] arr = new int[N];
+		st = new StringTokenizer(br.readLine());
+		
+		
+		for (int i = 0; i < N ; i ++) {
+			int temp = Integer.parseInt(st.nextToken());
+			arr[i] = temp;
+		}
+		
+		//삽입 정렬 사용 
+		// i를 하나 늘려가서
+		//나름 정렬되어있는 곳에 삽입 해서 , 많은 이동이 발생하는 정렬 방법
+		 sort(arr);
+		 
+		/* 
+		 for(int i = 0; i < N ; i ++) {
+			 System.out.println(arr[i]);
+		 }
+		 */
+		 
+		 System.out.println(arr[N- K]);
+		
+		
+		
+		
+		 
+		
+		
+		
+	}
+}
