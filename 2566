@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Joon7{
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st ;
+		
+		
+		
+		
+		int[][] arr = new int[9][9];
+		int max = -1;
+		int temp_i = -1 , temp_j = -1;
+		
+		for ( int i = 0 ; i < 9 ; i ++) {
+			st = new StringTokenizer ( br.readLine(), " ");
+			for (int j = 0 ; j < 9 ; j ++) {
+				
+				arr[i][j] = Integer.parseInt(st.nextToken());
+				 if ( arr[i][j] >= max ) {
+					max = arr[i][j];
+					temp_i = i; temp_j = j ;
+				}
+				
+			}
+		}
+		
+		
+		System.out.println(max);
+		temp_i ++;temp_j++;
+			System.out.println(temp_i + " " + temp_j);
+		
+	}
+}
